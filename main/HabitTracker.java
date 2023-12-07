@@ -37,5 +37,14 @@ public class HabitTracker {
     public void setNumOfDays(int numOfDays) {
         this.numOfDays = numOfDays;
     }
+
+    public String printHabitTracker() {
+        ArrayList<String> returnString = new ArrayList<>();
+        returnString.add("Habit Tracker: \n");
+        for (Day day: days) {
+            returnString.add(day.printDay());
+        }
+        return String.join(",", returnString);
+    }
     
 }

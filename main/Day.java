@@ -30,4 +30,13 @@ public class Day {
         this.date = date;
     }
 
+    public String printDay() {
+        ArrayList<String> returnString = new ArrayList<>();
+        returnString.add("Day ");
+        for (Habit habit: habits) {
+            returnString.add(habit.getName());
+        }
+        return String.join(",", returnString);
+    }
+
 }
